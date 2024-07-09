@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jupe Réversible | Enfant{% endblock %}
+
+{% block body %}
+<main class="py-4 mt-5 container">
+        <h1 class="text-center highlight mb-5">CATALOGUE ENFANT</h1>
+        <div class="col-12 my-auto">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4 order-1 text-center text-md-left">
+                    <img alt="jupe fille" class="img-fluid img-container"
+                            src="{{ asset('assets/images/catégories/enfant/jupe-fille.png') }}"
+                            style="max-height: 300px; height: auto; width: 300px;">
+                </div>
+                <div class="col-12 col-md-8 mt-3 order-2 text-center text-md-left">
+                    <h2 class="highlight">JUPE FILLE</h2>
+                    <p class="my-4">Collection Jupe boutonnée Enfant : jupe petite fille en coton, velours et jean, pleine de couleurs et de motifs ludiques. Taille réglable de 4 à 14 ans...</p>
+                    <a href="https://pacap-detail.fr/fr/1597-jupe-reversible-fille" class="btn text-white">Découvrir</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4 order-1 order-md-2 text-center text-md-right">
+                    <img alt="robe fille" class="img-fluid img-container"
+                            src="./assets/images/robeE.jpg"
+                            style="max-height: 300px; height: auto; width: 300px;">
+                </div>
+                <div class="col-12 col-md-7 mt-3 order-2 order-md-1 text-center text-md-right">
+                    <h2 class="highlight">ROBE FILLE</h2>
+                    <p class="my-4">Collection enfant de PACAP. Différents types de jupes et robes pour vos enfants. Taille unique.</p>
+                    <a href="https://pacap-detail.fr/fr/1598-robe-fille" class="btn text-white">Découvrir</a>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
