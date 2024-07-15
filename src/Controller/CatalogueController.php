@@ -11,9 +11,7 @@ class CatalogueController extends AbstractController
     #[Route('/catalogue', name: 'app_catalogue')]
     public function index(): Response
     {
-        return $this->render('catalogue/index.html.twig', [
-            'controller_name' => 'CatalogueController',
-        ]);
+        return $this->render('catalogue/index.html.twig');
     }
 
     #[Route('/catalogue/homme', name: 'app_homme')]
