@@ -35,7 +35,7 @@ class CatalogueController extends AbstractController
     #[Route('/catalogue/grandeTaille', name: 'app_grandeTaille')]
     public function grandeTaille(): Response
     {
-        return $this->render('drande_taille/index.html.twig');
+        return $this->render('grande_taille/index.html.twig');
     }
 
     #[Route('/catalogue/bijoux', name: 'app_bijoux')]
