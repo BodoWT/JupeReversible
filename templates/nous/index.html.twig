@@ -4,7 +4,7 @@
 
 {% block title %}Jupe Réversible | Qui sommes-nous ?{% endblock %}
 
-{% block body %}
+{% block body %}{% apply spaceless %}
 <main class="py-4">
         <div class="container mt-5">
             <div class="about-container">
@@ -47,4 +47,5 @@
             </ul>
         </div>
     </main>
+    {% endapply %}
 {% endblock %}

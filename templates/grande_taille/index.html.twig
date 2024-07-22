@@ -4,7 +4,7 @@
 
 {% block title %}Jupe Réversible | Grande Taille{% endblock %}
 
-{% block body %}
+{% block body %}{% apply spaceless %}
 <main class="py-4 mt-5 container">
         <h1 class="text-center highlight mb-5">CATALOGUE TAILLE GOURMANDE</h1>
         <div class="col-12 my-auto">
@@ -37,4 +37,5 @@
         </div>
         
     </main>
+    {% endapply %}
 {% endblock %}

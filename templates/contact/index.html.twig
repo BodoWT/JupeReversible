@@ -4,7 +4,7 @@
 
 {% block title %}Jupe Réversible | Contact{% endblock %}
 
-{% block body %}
+{% block body %}{% apply spaceless %}  
  <main class="py-4">
         <div class="text-center">
             <h1 class="mx-3" >VOUS AVEZ BESOIN DE NOUS CONTACTER :</h1>
@@ -47,4 +47,5 @@
             <button class="btn mb-5 mt-3"><a href="https://pacap-detail.fr/fr/" class="text-white">BOUTIQUE EN LIGNE</a></button>
         </div>
     </main>
+    {% endapply %}
 {% endblock %}

@@ -4,7 +4,7 @@
 
 {% block title %}Jupe Réversible | Autre{% endblock %}
 
-{% block body %}
+{% block body %}{% apply spaceless %}
 <main class="py-4 mt-5 container">
         <h1 class="text-center highlight mb-5">ACCESSOIRES</h1>
         <div class="col-12 my-auto">
@@ -51,4 +51,5 @@ Que ce soit en voyage, week-end, travail, à la maison, dans un sac à dos ou en
             </div>
         </div>
     </main>
+     {% endapply %}
 {% endblock %}

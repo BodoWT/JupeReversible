@@ -4,7 +4,7 @@
 
 {% block title %}Jupe Réversible | Bijoux{% endblock %}
 
-{% block body %}
+{% block body %}{% apply spaceless %}
 <main class="py-4 mt-5 container">
         <h1 class="text-center highlight mb-5">BIJOUX</h1>
         <div class="col-12 my-auto">
@@ -50,4 +50,5 @@
             </div>
         </div>
     </main>
+    {% endapply %}
 {% endblock %}
