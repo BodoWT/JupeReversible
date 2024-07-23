@@ -27,7 +27,7 @@
                 <a class="nav-link linkCat" href="https://pacap-diffusion.com/" itemprop="name">Grossiste</a>
             </li>
             <li class="nav-item" itemprop="url">
-                <a class="nav-link linkCat" href="/contact" itemprop="name">Contact</a>
+                <a class="nav-link linkCat {% if app.request.pathInfo == '/contact' %}active{% endif %}" href="/contact" itemprop="name">Contact</a>
             </li>
             <li class="nav-item dropdown" itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <a class="nav-link dropdown-toggle dropCat" href="/catalogue" aria-haspopup="true" aria-expanded="false" itemprop="name">
