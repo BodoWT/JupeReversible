@@ -15,40 +15,52 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link linkCat {{ app.request.attributes.get('_route') == 'app_main' ? 'active' : '' }}" href="{{ path('app_main') }}">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link linkCat {{ app.request.attributes.get('_route') == 'app_tissus' ? 'active' : '' }}" href="{{ path('app_tissus') }}">Nos Tissus</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link linkCat" href="https://pacap-diffusion.com/">Grossiste</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link linkCat {{ app.request.attributes.get('_route') == 'app_contact' ? 'active' : '' }}" href="{{ path('app_contact') }}">Contact</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle dropCat {{ app.request.attributes.get('_route') == 'app_catalogue' ? 'active' : '' }}" href="{{ path('app_catalogue') }}" aria-haspopup="true" aria-expanded="false">
-                        Catalogue
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul class="navbar-nav">
+            <li class="nav-item" itemprop="url">
+                <a class="nav-link linkCat" href="/" itemprop="name">Accueil</a>
+            </li>
+            <li class="nav-item" itemprop="url">
+                <a class="nav-link linkCat active" href="/tissus" itemprop="name">Nos Tissus</a>
+            </li>
+            <li class="nav-item" itemprop="url">
+                <a class="nav-link linkCat" href="https://pacap-diffusion.com/" itemprop="name">Grossiste</a>
+            </li>
+            <li class="nav-item" itemprop="url">
+                <a class="nav-link linkCat" href="/contact" itemprop="name">Contact</a>
+            </li>
+            <li class="nav-item dropdown" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <a class="nav-link dropdown-toggle dropCat" href="/catalogue" aria-haspopup="true" aria-expanded="false" itemprop="name">
+                    Catalogue
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item linkCat" href="/catalogue/homme" itemprop="url">
+                        <span itemprop="name">Homme</span>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item linkCat {{ app.request.attributes.get('_route') == 'app_homme' ? 'active' : '' }}" href="{{ path('app_homme') }}">Homme</a>
-                        <a class="dropdown-item linkCat {{ app.request.attributes.get('_route') == 'app_femme' ? 'active' : '' }}" href="{{ path('app_femme') }}">Femme</a>
-                        <a class="dropdown-item linkCat {{ app.request.attributes.get('_route') == 'app_grandeTaille' ? 'active' : '' }}" href="{{ path('app_grandeTaille') }}">Taille Gourmande</a>
-                        <a class="dropdown-item linkCat {{ app.request.attributes.get('_route') == 'app_enfant' ? 'active' : '' }}" href="{{ path('app_enfant') }}">Enfant</a>
-                        <a class="dropdown-item linkCat {{ app.request.attributes.get('_route') == 'app_bijoux' ? 'active' : '' }}" href="{{ path('app_bijoux') }}">Bijoux</a>
-                        <a class="dropdown-item linkCat {{ app.request.attributes.get('_route') == 'app_accessoires' ? 'active' : '' }}" href="{{ path('app_accessoires') }}">Accessoires</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link linkCat" href="https://pacap-detail.fr/fr/">Boutique en ligne</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link linkCat {{ app.request.attributes.get('_route') == 'app_nous' ? 'active' : '' }}" href="{{ path('app_nous') }}">À propos</a>
-                </li>
-            </ul>
-        </div>
+                    <a class="dropdown-item linkCat" href="/catalogue/femme" itemprop="url">
+                        <span itemprop="name">Femme</span>
+                    </a>
+                    <a class="dropdown-item linkCat" href="/catalogue/grandeTaille" itemprop="url">
+                        <span itemprop="name">Taille Gourmande</span>
+                    </a>
+                    <a class="dropdown-item linkCat" href="/catalogue/enfant" itemprop="url">
+                        <span itemprop="name">Enfant</span>
+                    </a>
+                    <a class="dropdown-item linkCat" href="/catalogue/bijoux" itemprop="url">
+                        <span itemprop="name">Bijoux</span>
+                    </a>
+                    <a class="dropdown-item linkCat" href="/catalogue/accessoires" itemprop="url">
+                        <span itemprop="name">Accessoires</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item" itemprop="url">
+                <a class="nav-link linkCat" href="https://pacap-detail.fr/fr/" itemprop="name">Boutique en ligne</a>
+            </li>
+            <li class="nav-item" itemprop="url">
+                <a class="nav-link linkCat" href="/Qui_sommes_nous" itemprop="name">À propos</a>
+            </li>
+        </ul>
+    </div>
     </div>
 </nav>
