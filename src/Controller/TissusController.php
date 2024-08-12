@@ -2,17 +2,22 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\CategorieRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class TissusController extends AbstractController
 {
     #[Route('/tissus', name: 'app_tissus')]
-    public function index(): Response
+    public function index(Request $request, CategorieRepository $categorie): Response
     {
-        return $this->render('tissus/index.html.twig', [
-            'controller_name' => 'TissusController',
+       $lang = $request->getLocale();
+       $article = $categorie->findOneBy(['slug' => '/tissus', 'langue' => $lang]);
+        return $this->render('main/index.html.twig', [
+            'article' => $article,
         ]);
+        
     }
 }

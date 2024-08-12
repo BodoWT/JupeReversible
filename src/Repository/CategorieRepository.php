@@ -2,22 +2,22 @@
 
 namespace App\Repository;
 
-use App\Entity\Catalogue;
+use App\Entity\Categorie;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Catalogue>
+ * @extends ServiceEntityRepository<Categorie>
  */
-class CatalogueRepository extends ServiceEntityRepository
+class CategorieRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Catalogue::class);
+        parent::__construct($registry, Categorie::class);
     }
 
     //    /**
-    //     * @return Catalogue[] Returns an array of Catalogue objects
+    //     * @return Categorie[] Returns an array of Categorie objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class CatalogueRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Catalogue
+    //    public function findOneBySomeField($value): ?Categorie
     //    {
     //        return $this->createQueryBuilder('c')
     //            ->andWhere('c.exampleField = :val')
